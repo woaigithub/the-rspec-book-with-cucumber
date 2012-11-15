@@ -9,4 +9,3 @@ Feature: code-breaker starts game
     When I start a new game
     Then I should see "Welcome to Codebreaker!"
     And I should see "Enter guess:"
-    But I should not see "What is your question?"
