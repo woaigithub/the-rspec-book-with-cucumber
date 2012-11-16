@@ -17,7 +17,7 @@ end
 
 When /^I start a new game$/ do
   game=Codebreaker::Game.new(output)
-  game.start
+  game.start('1234')
 end
 
 Then /^I should see "(.*?)"$/ do |message|
@@ -30,8 +30,9 @@ Given /^the secret code is "(.*?)"$/ do |secret|
 end
 
 When /^I guess "(.*?)"$/ do |guess|
-  @game=Codebreaker::Game.new(output)
-  @game.guess(guess)
+  game=Codebreaker::Game.new(output)
+  game.start('1234')
+  game.guess(guess)
 end
 
 Then /^the mark should be "(.*?)"$/ do |mark|

@@ -2,6 +2,13 @@ require 'spec_helper'
 
 module Codebreaker
   describe Marker do
+    describe "code:1234 guess:5577" do
+      it "return '' " do
+        marker = Marker.new('1234','5577')
+        marker.exact_match_count.should == 0
+        marker.number_match_count.should == 0
+      end
+    end
     describe "#exact_match_count" do
       context "with no matches" do
         it "return 0" do
