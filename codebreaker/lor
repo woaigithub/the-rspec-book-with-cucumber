@@ -1,0 +1,10 @@
+
+Codebreaker::Game
+  #start
+    sends a welcome message
+    prompts for the first guess
+  #guess
+    send the mark to the output
+
+Finished in 0.00253 seconds
+3 examples, 0 failures
